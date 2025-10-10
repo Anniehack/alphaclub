@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2019",              // Versión de JavaScript a generar
+    "module": "commonjs",            // Módulos compatibles con Node.js
+    "outDir": "lib",                 // Carpeta donde se generan los archivos compilados
+    "rootDir": "src",                // Carpeta donde está el código fuente
+    "strict": true,                  // Activa todas las comprobaciones estrictas
+    "esModuleInterop": true,         // Permite interoperabilidad con módulos ES
+    "skipLibCheck": true             // Omite comprobación de tipos en librerías
+  },
+  "include": ["src"]                 // Incluye todos los archivos dentro de src
+}

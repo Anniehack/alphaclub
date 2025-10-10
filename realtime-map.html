@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OBC Real-Time Map</title>
+    <meta charset="utf-8" />
+    <style>
+      #map {
+        height: 100vh;
+        width: 100%;
+      }
+    </style>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVE495YY2NB2BlQjAGITNfQONES9Gzxes"
+      defer
+    ></script>
+    <script>
+      let map;
+      let marker;
+
+      function initMap() {
+        const initialPosition = { lat: 20.6597, lng: -103.3496 }; // Guadalajara
+
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: initialPosition,
+        });
+
+        marker = new google.maps.Marker({
+          position: initialPosition,
+          map,
+          title: "OBC Location",
+        });
+
+        // Aquí agregarás el código para actualizar la posición en tiempo real desde Firestore
+      }
+
+      window.initMap = initMap;
+    </script>
+  </head>
+  <body onload="initMap()">
+    <div id="map"></div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "333158314669",
+    "project_id": "alphaclub-ev7kl",
+    "storage_bucket": "alphaclub-ev7kl.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333158314669:android:ced070f3fdf83bfe424c24",
+        "android_client_info": {
+          "package_name": "com.alphajetlogistics.alphaclub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnsic_Q1R6tXZduBtpYveoxODB9I5T6_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
