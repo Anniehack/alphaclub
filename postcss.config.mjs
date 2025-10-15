@@ -1,8 +1,9 @@
 // postcss.config.mjs
-const config = {
+// This configuration uses a plain object and assumes 'tailwindcss' and 'autoprefixer'
+// are installed as npm packages and correctly handle their PostCSS integration.
+export default {
   plugins: {
-    tailwindcss: {}, // This is the standard way to reference it
+    tailwindcss: {},
     autoprefixer: {},
   },
 };
-export default config;
