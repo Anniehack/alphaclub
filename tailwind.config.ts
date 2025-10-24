@@ -1,6 +1,6 @@
 // tailwind.config.ts
 import type {Config} from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme'; // CORRECTED IMPORT
+import defaultTheme from 'tailwindcss/defaultTheme'; // THIS LINE IS THE CRITICAL CHANGE
 
 export default {
   darkMode: ['class'],
@@ -19,7 +19,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans], // CORRECTED USAGE
+        // USAGE NOW REFERS TO defaultTheme.fontFamily.sans
+        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         background: 'hsl(var(--background))',
