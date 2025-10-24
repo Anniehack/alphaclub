@@ -102,3 +102,8 @@ app/src/main/res/xml/config.xml
 
 # Next.js build output
 .next/
+# Environment variables and sensitive config
+# Environment variables and sensitive config
+.env
+android/apphosting.yaml
+
