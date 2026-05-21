@@ -1,5 +1,3 @@
-
-
 "use client"
 
 import { useState, useEffect, useCallback } from 'react';
@@ -18,7 +16,10 @@ import {
 import { getAirportCode } from '@/ai/flows/get-airport-code-flow';
 import type { OBC, Mission, MissionApplication } from '@/types';
 import { useUser } from "@/hooks/use-user"
-import { MissionTimeline } from "./mission-timeline"
+
+// Corregido: Ruta absoluta para el timeline dentro de dashboard
+import { MissionTimeline } from "@/components/dashboard/mission-timeline"
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -28,14 +29,19 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
-import { Skeleton } from '../ui/skeleton';
+
+// Corregidos: Componentes de Shadcn que están en src/ui/
+import { Skeleton } from "@/ui/skeleton";
 import { useToast } from '@/hooks/use-toast';
-import { Button } from '../ui/button';
+import { Button } from "@/ui/button";
+
 import { format } from 'date-fns';
 import { ArrowRight, MapPin, CheckCircle, Loader2, Plane, Truck, Luggage, XCircle, MessageSquare, Paperclip, Receipt } from 'lucide-react';
-import { StatusBadge } from '../status-badge';
-import { MissionChatSheet } from '../chat/mission-chat-sheet';
-import { ExpenseReportDialog } from '../missions/expense-report-dialog';
+
+// Corregidos: Componentes sueltos dentro de components/
+import { StatusBadge } from "@/components/status-badge";
+import { MissionChatSheet } from "@/components/chat/mission-chat-sheet";
+import { ExpenseReportDialog } from '@/components/missions/expense-report-dialog';
 import { cn } from '@/lib/utils';
 
 const ServiceTypeIcons = ({ serviceType }: { serviceType: Array<'OBC' | 'First Mile' | 'Last Mile'> | undefined }) => {
